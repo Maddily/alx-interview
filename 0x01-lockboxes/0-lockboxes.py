@@ -25,16 +25,16 @@ def canUnlockAll(boxes):
     """
 
     queue = deque()
-    visited = set()
 
-    if len(boxes) >= 1:
-        visited.add(0)
+    if not boxes:
+        return True
 
+    visited = {0}
     queue += boxes[0]
 
     while queue:
         box = queue.popleft()
-        if box not in visited:
+        if box not in visited and box < len(boxes):
             visited.add(box)
             queue += boxes[box]
 
