@@ -1,6 +1,4 @@
 #!/usr/bin/python3
-from collections import deque
-
 """
 This module contains a function to determine
 if all the lockboxes can be unlocked.
@@ -11,6 +9,8 @@ Each lockbox contains a list of keys that can unlock other lockboxes.
 The function returns True if all the lockboxes can be unlocked,
 and False otherwise.
 """
+
+from collections import deque
 
 
 def canUnlockAll(boxes):
