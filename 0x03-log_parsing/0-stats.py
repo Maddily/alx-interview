@@ -7,7 +7,6 @@ such as file size and status code occurrences.
 import re
 import sys
 import signal
-import time
 
 
 count = 0
@@ -22,26 +21,6 @@ status_codes = {
     "405": 0,
     "500": 0
 }
-
-
-def is_integer(string):
-    """
-    Check if a string represents an integer.
-
-    Args:
-        string (str): The string to check.
-
-    Returns:
-        bool: True if the string represents an integer,
-            False otherwise.
-    """
-
-    try:
-        int(string)
-        return True
-    except ValueError:
-        return False
-
 
 def match_line(line):
     """
