@@ -22,6 +22,7 @@ status_codes = {
     "500": 0
 }
 
+
 def match_line(line):
     """
     Match a line against a specific pattern.
