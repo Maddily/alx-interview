@@ -20,7 +20,7 @@ def validUTF8(data):
     i = 0
 
     while i < n:
-        leader_byte = data[i]
+        leader_byte = data[i] & 0xFF
 
         if leader_byte not in range(0, 256):
             return False
@@ -43,7 +43,7 @@ def validUTF8(data):
 
         # Check trailing bytes
         for j in range(1, number_of_bytes):
-            if data[i + j] not in range(128, 192):
+            if data[i + j] & 0xFF not in range(128, 192):
                 return False
 
         i += number_of_bytes
