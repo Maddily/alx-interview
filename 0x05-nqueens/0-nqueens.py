@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This solves the N queens problem.
+This module solves the N queens problem.
 """
 import sys
 
