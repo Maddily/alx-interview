@@ -21,6 +21,12 @@ def makeChange(coins, total):
         the change, or -1 if it is not possible.
     """
 
+    if total <= 0:
+        return 0
+
+    if len(coins) == 0:
+        return -1
+
     coins.sort(reverse=True)
     number_of_coins_needed = 0
 
